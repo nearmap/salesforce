@@ -1,6 +1,6 @@
 # preliminaries #
 
-connection: "vandelay_looker_connection"
+connection: "dw"
 
 include: "*.view"
 

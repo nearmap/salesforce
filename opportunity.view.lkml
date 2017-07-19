@@ -1,5 +1,5 @@
 view: _opportunity {
-  sql_table_name: looker_salesforce.sf_opportunity ;;
+  sql_table_name: salesforce.opportunity ;;
   # dimensions #
 
   dimension: id {
@@ -10,7 +10,7 @@ view: _opportunity {
 
   dimension: account_id {
     type: string
-    sql: ${TABLE}.accountid ;;
+    sql: ${TABLE}.account_id ;;
   }
 
   dimension: amount {
@@ -28,18 +28,18 @@ view: _opportunity {
     type: time
     timeframes: [date, week, month]
     convert_tz: no
-    sql: ${TABLE}.closedate ;;
+    sql: ${TABLE}.close_date ;;
   }
 
   dimension: created_by_id {
     type: string
-    sql: ${TABLE}.createdbyid ;;
+    sql: ${TABLE}.created_by_id ;;
   }
 
   dimension_group: created {
     type: time
     timeframes: [date, week, month]
-    sql: ${TABLE}.createddate ;;
+    sql: ${TABLE}.created_date ;;
   }
 
   dimension: description {
@@ -54,64 +54,64 @@ view: _opportunity {
 
   dimension: fiscal_quarter {
     type: number
-    sql: ${TABLE}.fiscalquarter ;;
+    sql: ${TABLE}.fiscal_quarter ;;
   }
 
   dimension: fiscal_year {
     type: number
-    sql: ${TABLE}.fiscalyear ;;
+    sql: ${TABLE}.fiscal_year ;;
   }
 
   dimension: forecast_category {
     type: string
-    sql: ${TABLE}.forecastcategory ;;
+    sql: ${TABLE}.forecast_category ;;
   }
 
   dimension: forecast_category_name {
     type: string
-    sql: ${TABLE}.forecastcategoryname ;;
+    sql: ${TABLE}.forecast_category_name ;;
   }
 
   dimension: has_opportunity_line_item {
     type: yesno
-    sql: ${TABLE}.hasopportunitylineitem ;;
+    sql: ${TABLE}.has_opportunity_line_item ;;
   }
 
   dimension: is_closed {
     type: yesno
-    sql: ${TABLE}.isclosed ;;
+    sql: ${TABLE}.is_closed ;;
   }
 
   dimension: is_deleted {
     type: yesno
-    sql: ${TABLE}.isdeleted ;;
+    sql: ${TABLE}.is_deleted ;;
   }
 
   dimension: is_private {
     type: yesno
     hidden: yes
-    sql: ${TABLE}.isprivate ;;
+    sql: ${TABLE}.is_private ;;
   }
 
   dimension: is_won {
     type: yesno
-    sql: ${TABLE}.iswon ;;
+    sql: ${TABLE}.is_won ;;
   }
 
   dimension: last_modified_by_id {
     type: string
-    sql: ${TABLE}.lastmodifiedbyid ;;
+    sql: ${TABLE}.last_modified_by_id ;;
   }
 
   dimension_group: last_modified {
     type: time
     timeframes: [time, date, week, month]
-    sql: ${TABLE}.lastmodifieddate ;;
+    sql: ${TABLE}.last_modified_date ;;
   }
 
   dimension: lead_source {
     type: string
-    sql: ${TABLE}.leadsource ;;
+    sql: ${TABLE}.lead_source ;;
   }
 
   dimension: name {
@@ -121,7 +121,7 @@ view: _opportunity {
 
   dimension: owner_id {
     type: string
-    sql: ${TABLE}.ownerid ;;
+    sql: ${TABLE}.owner_id ;;
   }
 
   dimension: probability {
@@ -131,13 +131,13 @@ view: _opportunity {
 
   dimension: stage_name {
     type: string
-    sql: ${TABLE}.stagename ;;
+    sql: ${TABLE}.stage_name ;;
   }
 
   dimension_group: system_modstamp {
     type: time
     timeframes: [time, date, week, month]
-    sql: ${TABLE}.systemmodstamp ;;
+    sql: ${TABLE}.system_modstamp ;;
   }
 
   dimension: type {

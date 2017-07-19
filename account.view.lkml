@@ -1,5 +1,5 @@
 view: _account {
-  sql_table_name: looker_salesforce.sf_account ;;
+  sql_table_name: salesforce.account ;;
   # dimensions #
 
   dimension: id {
@@ -8,63 +8,63 @@ view: _account {
     sql: ${TABLE}.id ;;
   }
 
-  dimension: account_number {
-    type: string
-    sql: ${TABLE}.accountnumber ;;
-  }
+  # dimension: account_number {
+  #   type: string
+  #   sql: ${TABLE}.accountnumber ;;
+  # }
 
   dimension: annual_revenue {
     type: number
-    sql: ${TABLE}.annualrevenue ;;
+    sql: ${TABLE}.annual_revenue ;;
     value_format: "$#,##0"
   }
 
-  dimension: attributes__type {
-    type: string
-    sql: ${TABLE}.attributes__type ;;
-  }
+  # dimension: attributes__type {
+  #   type: string
+  #   sql: ${TABLE}.attributes__type ;;
+  # }
 
   dimension: billing_city {
     type: string
-    sql: ${TABLE}.billingcity ;;
+    sql: ${TABLE}.billing_city ;;
   }
 
   dimension: billing_country {
     type: string
-    sql: ${TABLE}.billingcountry ;;
+    sql: ${TABLE}.billing_country ;;
   }
 
   dimension: billing_postal_code {
     type: string
-    sql: ${TABLE}.billingpostalcode ;;
+    sql: ${TABLE}.billing_postal_code ;;
   }
 
   dimension: billing_state {
     type: string
-    sql: ${TABLE}.billingstate ;;
+    sql: ${TABLE}.billing_state ;;
   }
 
   dimension: billing_street {
     type: string
-    sql: ${TABLE}.billingstreet ;;
+    sql: ${TABLE}.billing_street ;;
   }
 
-  dimension: cleanstatus {
-    type: string
-    hidden: yes
-    sql: ${TABLE}.cleanstatus ;;
-  }
+  # dimension: cleanstatus {
+  #   type: string
+  #   hidden: yes
+  #   sql: ${TABLE}.cleanstatus ;;
+  # }
 
   dimension: created_by_id {
     type: string
     hidden: yes
-    sql: ${TABLE}.createdbyid ;;
+    sql: ${TABLE}.created_by_id ;;
   }
 
   dimension_group: created {
     type: time
     timeframes: [time, date, week, month]
-    sql: ${TABLE}.createddate ;;
+    sql: ${TABLE}.created_date ;;
   }
 
   dimension: description {
@@ -84,19 +84,19 @@ view: _account {
 
   dimension: is_deleted {
     type: yesno
-    sql: ${TABLE}.isdeleted ;;
+    sql: ${TABLE}.is_deleted ;;
   }
 
   dimension: last_modified_by_id {
     type: string
     hidden: yes
-    sql: ${TABLE}.lastmodifiedbyid ;;
+    sql: ${TABLE}.last_modified_by_id ;;
   }
 
   dimension_group: last_modified {
     type: time
     timeframes: [time, date, week, month]
-    sql: ${TABLE}.lastmodifieddate ;;
+    sql: ${TABLE}.last_modifie_ddate ;;
   }
 
   dimension: name {
@@ -106,19 +106,19 @@ view: _account {
 
   dimension: number_of_employees {
     type: number
-    sql: ${TABLE}.numberofemployees ;;
+    sql: ${TABLE}.number_of_employees ;;
   }
 
   dimension: owner_id {
     type: string
-    sql: ${TABLE}.ownerid ;;
+    sql: ${TABLE}.owner_id ;;
   }
 
-  dimension: ownership {
-    type: string
-    hidden: yes
-    sql: ${TABLE}.ownership ;;
-  }
+  # dimension: ownership {
+  #   type: string
+  #   hidden: yes
+  #   sql: ${TABLE}.ownership ;;
+  # }
 
   dimension: phone {
     type: string
@@ -131,33 +131,33 @@ view: _account {
 
   dimension: shipping_city {
     type: string
-    sql: ${TABLE}.shippingcity ;;
+    sql: ${TABLE}.shipping_city ;;
   }
 
   dimension: shipping_country {
     type: string
-    sql: ${TABLE}.shippingcountry ;;
+    sql: ${TABLE}.shipping_country ;;
   }
 
   dimension: shipping_postal_code {
     type: zipcode
-    sql: ${TABLE}.shippingpostalcode ;;
+    sql: ${TABLE}.shipping_postal_code ;;
   }
 
   dimension: shipping_state {
     type: string
-    sql: ${TABLE}.shippingstate ;;
+    sql: ${TABLE}.shipping_state ;;
   }
 
   dimension: shipping_street {
     type: string
-    sql: ${TABLE}.shippingstreet ;;
+    sql: ${TABLE}.shipping_street ;;
   }
 
   dimension_group: system_modstamp {
     type: time
     timeframes: [time, date, week, month]
-    sql: ${TABLE}.systemmodstamp ;;
+    sql: ${TABLE}.system_modstamp ;;
   }
 
   dimension: type {

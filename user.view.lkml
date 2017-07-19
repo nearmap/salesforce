@@ -1,5 +1,5 @@
 view: _user {
-  sql_table_name: looker_salesforce.sf_user ;;
+  sql_table_name: salesforce.user ;;
 
   dimension: id {
     primary_key: yes
@@ -14,7 +14,7 @@ view: _user {
   dimension: account_id {
     type: string
     hidden: yes
-    sql: ${TABLE}.accountid ;;
+    sql: ${TABLE}.account_id ;;
   }
 
   dimension: alias {
@@ -24,7 +24,7 @@ view: _user {
 
   dimension: badge_text {
     type: string
-    sql: ${TABLE}.badgetext ;;
+    sql: ${TABLE}.badge_text ;;
   }
 
   dimension: city {
@@ -34,12 +34,12 @@ view: _user {
 
   dimension: community_nickname {
     type: string
-    sql: ${TABLE}.communitynickname ;;
+    sql: ${TABLE}.community_nickname ;;
   }
 
   dimension: company_name {
     type: string
-    sql: ${TABLE}.companyname ;;
+    sql: ${TABLE}.company_name ;;
   }
 
   dimension: country {
@@ -49,23 +49,23 @@ view: _user {
 
   dimension: created_by_id {
     type: string
-    sql: ${TABLE}.createdbyid ;;
+    sql: ${TABLE}.created_by_id ;;
   }
 
   dimension_group: created {
     type: time
     timeframes: [time, date, week, month]
-    sql: ${TABLE}.createddate ;;
+    sql: ${TABLE}.created_date ;;
   }
 
   dimension: default_group_notification_frequency {
     type: string
-    sql: ${TABLE}.defaultgroupnotificationfrequency ;;
+    sql: ${TABLE}.default_group_notification_frequency ;;
   }
 
   dimension: digest_frequency {
     type: string
-    sql: ${TABLE}.digestfrequency ;;
+    sql: ${TABLE}.digest_frequency ;;
   }
 
   dimension: email {
@@ -75,77 +75,77 @@ view: _user {
 
   dimension: email_encoding_key {
     type: string
-    sql: ${TABLE}.emailencodingkey ;;
+    sql: ${TABLE}.email_encoding_key ;;
   }
 
   dimension: first_name {
     type: string
-    sql: ${TABLE}.firstname ;;
+    sql: ${TABLE}.first_name ;;
   }
 
   dimension: forecast_enabled {
     type: yesno
-    sql: ${TABLE}.forecastenabled ;;
+    sql: ${TABLE}.forecast_enabled ;;
   }
 
   dimension: is_active {
     type: yesno
-    sql: ${TABLE}.isactive ;;
+    sql: ${TABLE}.is_active ;;
   }
 
   dimension: language_locale_key {
     type: string
-    sql: ${TABLE}.languagelocalekey ;;
+    sql: ${TABLE}.language_locale_key ;;
   }
 
   dimension_group: last_login {
     type: time
     timeframes: [time, date, week, month]
-    sql: ${TABLE}.lastlogindate ;;
+    sql: ${TABLE}.last_login_date ;;
   }
 
   dimension: last_modified_by_id {
     type: string
-    sql: ${TABLE}.lastmodifiedbyid ;;
+    sql: ${TABLE}.last_modifiedby_id ;;
   }
 
   dimension_group: last_modified {
     type: time
     timeframes: [time, date, week, month]
-    sql: ${TABLE}.lastmodifieddate ;;
+    sql: ${TABLE}.last_modified_date ;;
   }
 
   dimension: last_name {
     type: string
-    sql: ${TABLE}.lastname ;;
+    sql: ${TABLE}.last_name ;;
   }
 
   dimension_group: last_password_change {
     type: time
     timeframes: [time, date, week, month]
-    sql: ${TABLE}.lastpasswordchangedate ;;
+    sql: ${TABLE}.last_password_change_date ;;
   }
 
   dimension_group: last_referenced {
     type: time
     timeframes: [time, date, week, month]
-    sql: ${TABLE}.lastreferenceddate ;;
+    sql: ${TABLE}.last_referenced_date ;;
   }
 
   dimension_group: last_viewed {
     type: time
     timeframes: [time, date, week, month]
-    sql: ${TABLE}.lastvieweddate ;;
+    sql: ${TABLE}.last_viewed_date ;;
   }
 
   dimension: locale_sid_key {
     type: string
-    sql: ${TABLE}.localesidkey ;;
+    sql: ${TABLE}.locale_sid_key ;;
   }
 
   dimension: mobile_phone {
     type: string
-    sql: ${TABLE}.mobilephone ;;
+    sql: ${TABLE}.mobile_phone ;;
   }
 
   dimension: name {
@@ -160,22 +160,22 @@ view: _user {
 
   dimension: postal_code {
     type: string
-    sql: ${TABLE}.postalcode ;;
+    sql: ${TABLE}.postal_code ;;
   }
 
   dimension: profile_id {
     type: string
-    sql: ${TABLE}.profileid ;;
+    sql: ${TABLE}.profile_id ;;
   }
 
   dimension: receives_admin_info_emails {
     type: yesno
-    sql: ${TABLE}.receivesadmininfoemails ;;
+    sql: ${TABLE}.receives_admin_info_emails ;;
   }
 
   dimension: receives_info_emails {
     type: yesno
-    sql: ${TABLE}.receivesinfoemails ;;
+    sql: ${TABLE}.receives_info_emails ;;
   }
 
   dimension: state {
@@ -191,12 +191,12 @@ view: _user {
   dimension_group: system_modstamp {
     type: time
     timeframes: [time, date, week, month]
-    sql: ${TABLE}.systemmodstamp ;;
+    sql: ${TABLE}.system_modstamp ;;
   }
 
   dimension: time_zone_sid_key {
     type: string
-    sql: ${TABLE}.timezonesidkey ;;
+    sql: ${TABLE}.time_zone_sid_key ;;
   }
 
   dimension: username {
@@ -211,12 +211,12 @@ view: _user {
 
   dimension: user_role_id {
     type: string
-    sql: ${TABLE}.userroleid ;;
+    sql: ${TABLE}.user_role_id ;;
   }
 
   dimension: user_type {
     type: string
-    sql: ${TABLE}.usertype ;;
+    sql: ${TABLE}.user_type ;;
   }
 
   # measures #

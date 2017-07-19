@@ -1,5 +1,5 @@
 view: _lead {
-  sql_table_name: looker_salesforce.sf_lead ;;
+  sql_table_name: salesforce.lead ;;
   # dimensions #
 
   dimension: id {
@@ -10,7 +10,7 @@ view: _lead {
 
   dimension: annual_revenue {
     type: number
-    sql: ${TABLE}.annualrevenue ;;
+    sql: ${TABLE}.annual_revenue ;;
   }
 
   dimension: city {
@@ -31,38 +31,38 @@ view: _lead {
   dimension: converted_account_id {
     type: string
     hidden: yes
-    sql: ${TABLE}.convertedaccountid ;;
+    sql: ${TABLE}.converted_account_id ;;
   }
 
   dimension: converted_contact_id {
     type: string
     hidden: yes
-    sql: ${TABLE}.convertedcontactid ;;
+    sql: ${TABLE}.converted_contact_id ;;
   }
 
   dimension_group: converted {
     type: time
     timeframes: [date, week, month]
     convert_tz: no
-    sql: ${TABLE}.converteddate ;;
+    sql: ${TABLE}.converted_date ;;
   }
 
   dimension: converted_opportunity_id {
     type: string
     hidden: yes
-    sql: ${TABLE}.convertedopportunityid ;;
+    sql: ${TABLE}.converted_opportunity_id ;;
   }
 
   dimension: created_by_id {
     type: string
     hidden: yes
-    sql: ${TABLE}.createdbyid ;;
+    sql: ${TABLE}.created_by_id ;;
   }
 
   dimension_group: created {
     type: time
     timeframes: [time, date, week, month]
-    sql: ${TABLE}.createddate ;;
+    sql: ${TABLE}.created_date ;;
   }
 
   dimension: description {
@@ -81,7 +81,7 @@ view: _lead {
 
   dimension: first_name {
     type: string
-    sql: ${TABLE}.firstname ;;
+    sql: ${TABLE}.first_name ;;
   }
 
   dimension: industry {
@@ -91,38 +91,38 @@ view: _lead {
 
   dimension: is_converted {
     type: yesno
-    sql: ${TABLE}.isconverted ;;
+    sql: ${TABLE}.is_converted ;;
   }
 
   dimension: is_deleted {
     type: yesno
-    sql: ${TABLE}.isdeleted ;;
+    sql: ${TABLE}.is_deleted ;;
   }
 
   dimension: is_unread_by_owner {
     type: yesno
-    sql: ${TABLE}.isunreadbyowner ;;
+    sql: ${TABLE}.is_unread_by_owner ;;
   }
 
   dimension: last_modified_by_id {
     type: string
-    sql: ${TABLE}.lastmodifiedbyid ;;
+    sql: ${TABLE}.last_modified_by_id ;;
   }
 
   dimension_group: last_modified {
     type: time
     timeframes: [date, week, month]
-    sql: ${TABLE}.lastmodifieddate ;;
+    sql: ${TABLE}.last_modified_date ;;
   }
 
   dimension: last_name {
     type: string
-    sql: ${TABLE}.lastname ;;
+    sql: ${TABLE}.last_name ;;
   }
 
   dimension: lead_source {
     type: string
-    sql: ${TABLE}.leadsource ;;
+    sql: ${TABLE}.lead_source ;;
   }
 
   dimension: name {
@@ -132,13 +132,13 @@ view: _lead {
 
   dimension: number_of_employees {
     type: number
-    sql: ${TABLE}.numberofemployees ;;
+    sql: ${TABLE}.number_of_employees ;;
   }
 
   dimension: owner_id {
     type: string
     hidden: yes
-    sql: ${TABLE}.ownerid ;;
+    sql: ${TABLE}.owner_id ;;
   }
 
   dimension: phone {
@@ -148,7 +148,7 @@ view: _lead {
 
   dimension: postal_code {
     type: string
-    sql: ${TABLE}.postalcode ;;
+    sql: ${TABLE}.postal_code ;;
   }
 
   dimension: salutation {
@@ -174,7 +174,7 @@ view: _lead {
   dimension_group: system_modstamp {
     type: time
     timeframes: [date, week, month]
-    sql: ${TABLE}.systemmodstamp ;;
+    sql: ${TABLE}.system_modstamp ;;
   }
 
   dimension: title {

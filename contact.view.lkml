@@ -1,5 +1,5 @@
 view: _contact {
-  sql_table_name: looker_salesforce.sf_contact ;;
+  sql_table_name: salesforce.contact ;;
   # dimensions #
 
   dimension: id {
@@ -10,12 +10,12 @@ view: _contact {
 
   dimension: account_id {
     type: string
-    sql: ${TABLE}.accountid ;;
+    sql: ${TABLE}.account_id ;;
   }
 
   dimension: assistant_name {
     type: string
-    sql: ${TABLE}.assistantname ;;
+    sql: ${TABLE}.assistant_name ;;
   }
 
   #   - dimension: assistant_phone
@@ -32,13 +32,13 @@ view: _contact {
   dimension: created_by_id {
     type: string
     hidden: yes
-    sql: ${TABLE}.createdbyid ;;
+    sql: ${TABLE}.created_by_id ;;
   }
 
   dimension_group: created {
     type: time
     timeframes: [date, week, month]
-    sql: ${TABLE}.createddate ;;
+    sql: ${TABLE}.created_date ;;
   }
 
   dimension: department {
@@ -58,69 +58,69 @@ view: _contact {
 
   dimension: first_name {
     type: string
-    sql: ${TABLE}.firstname ;;
+    sql: ${TABLE}.first_name ;;
   }
 
   dimension: is_deleted {
     type: yesno
-    sql: ${TABLE}.isdeleted ;;
+    sql: ${TABLE}.is_deleted ;;
   }
 
   dimension: email_bounced {
     type: yesno
-    sql: ${TABLE}.isemailbounced ;;
+    sql: ${TABLE}.is_email_bounced ;;
   }
 
   dimension: last_modified_by_id {
     type: string
     hidden: yes
-    sql: ${TABLE}.lastmodifiedbyid ;;
+    sql: ${TABLE}.last_modified_by_id ;;
   }
 
   dimension_group: last_modified {
     type: time
     timeframes: [date, week, month]
-    sql: ${TABLE}.lastmodifieddate ;;
+    sql: ${TABLE}.last_modified_date ;;
   }
 
   dimension: last_name {
     type: string
-    sql: ${TABLE}.lastname ;;
+    sql: ${TABLE}.last_name ;;
   }
 
   dimension: lead_source {
     type: string
-    sql: ${TABLE}.leadsource ;;
+    sql: ${TABLE}.lead_source ;;
   }
 
   dimension: mailing_city {
     type: string
-    sql: ${TABLE}.mailingcity ;;
+    sql: ${TABLE}.mailing_city ;;
   }
 
   dimension: mailing_country {
     type: string
-    sql: ${TABLE}.mailingcountry ;;
+    sql: ${TABLE}.mailing_country ;;
   }
 
   dimension: mailing_postal_code {
     type: string
-    sql: ${TABLE}.mailingpostalcode ;;
+    sql: ${TABLE}.mailing_postal_code ;;
   }
 
   dimension: mailing_state {
     type: string
-    sql: ${TABLE}.mailingstate ;;
+    sql: ${TABLE}.mailing_state ;;
   }
 
   dimension: mailing_street {
     type: string
-    sql: ${TABLE}.mailingstreet ;;
+    sql: ${TABLE}.mailing_street ;;
   }
 
   dimension: mobile_phone {
     type: string
-    sql: ${TABLE}.mobilephone ;;
+    sql: ${TABLE}.mobile_phone ;;
   }
 
   dimension: name {
@@ -155,7 +155,7 @@ view: _contact {
   dimension: owner_id {
     type: string
     hidden: yes
-    sql: ${TABLE}.ownerid ;;
+    sql: ${TABLE}.owner_id ;;
   }
 
   dimension: phone {

@@ -1,5 +1,5 @@
 view: _campaign {
-  sql_table_name: looker_salesforce.sf_campaign ;;
+  sql_table_name: salesforce.campaign ;;
   # dimensions #
 
   dimension: id {
@@ -10,29 +10,29 @@ view: _campaign {
 
   dimension: actual_cost {
     type: number
-    sql: ${TABLE}.actualcost ;;
+    sql: ${TABLE}.actual_cost ;;
   }
 
   dimension: amount_all_opportunities {
     type: number
-    sql: ${TABLE}.amountallopportunities ;;
+    sql: ${TABLE}.amount_all_opportunities ;;
   }
 
   dimension: amount_won_opportunities {
     type: number
-    sql: ${TABLE}.amountwonopportunities ;;
+    sql: ${TABLE}.amount_won_opportunities ;;
   }
 
   dimension: created_by_id {
     type: string
     hidden: yes
-    sql: ${TABLE}.createdbyid ;;
+    sql: ${TABLE}.created_by_id ;;
   }
 
   dimension_group: created {
     type: time
     timeframes: [date, week, month]
-    sql: ${TABLE}.createddate ;;
+    sql: ${TABLE}.created_date ;;
   }
 
   dimension: description {
@@ -44,28 +44,28 @@ view: _campaign {
     type: time
     timeframes: [date, week, month]
     convert_tz: no
-    sql: ${TABLE}.enddate ;;
+    sql: ${TABLE}.end_date ;;
   }
 
   dimension: is_active {
     type: yesno
-    sql: ${TABLE}.isactive ;;
+    sql: ${TABLE}.is_active ;;
   }
 
   dimension: is_deleted {
     type: yesno
-    sql: ${TABLE}.isdeleted ;;
+    sql: ${TABLE}.is_deleted ;;
   }
 
   dimension: last_modified_by_id {
     type: string
-    sql: ${TABLE}.lastmodifiedbyid ;;
+    sql: ${TABLE}.last_modifiedby_id ;;
   }
 
   dimension_group: last_modified {
     type: time
     timeframes: [date, week, month]
-    sql: ${TABLE}.lastmodifieddate ;;
+    sql: ${TABLE}.last_modified_date ;;
   }
 
   dimension: name {
@@ -75,38 +75,38 @@ view: _campaign {
 
   dimension: number_of_contacts {
     type: number
-    sql: ${TABLE}.numberofcontacts ;;
+    sql: ${TABLE}.number_of_contacts ;;
   }
 
   dimension: number_of_converted_leads {
     type: number
-    sql: ${TABLE}.numberofconvertedleads ;;
+    sql: ${TABLE}.number_of_converted_leads ;;
   }
 
   dimension: number_of_leads {
     type: number
-    sql: ${TABLE}.numberofleads ;;
+    sql: ${TABLE}.number_of_leads ;;
   }
 
   dimension: number_of_opportunities {
     type: number
-    sql: ${TABLE}.numberofopportunities ;;
+    sql: ${TABLE}.number_of_opportunities ;;
   }
 
   dimension: number_of_responses {
     type: number
-    sql: ${TABLE}.numberofresponses ;;
+    sql: ${TABLE}.number_of_responses ;;
   }
 
   dimension: number_of_won_opportunities {
     type: number
-    sql: ${TABLE}.numberofwonopportunities ;;
+    sql: ${TABLE}.number_of_won_opportunities ;;
   }
 
   dimension: number_sent {
     type: number
     hidden: yes
-    sql: ${TABLE}.numbersent ;;
+    sql: ${TABLE}.number_sent ;;
   }
 
   dimension: owner_id {
@@ -129,7 +129,7 @@ view: _campaign {
   dimension_group: system_modstamp {
     type: time
     timeframes: [time, date, week, month]
-    sql: ${TABLE}.systemmodstamp ;;
+    sql: ${TABLE}.system_modstamp ;;
   }
 
   dimension: type {
