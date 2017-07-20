@@ -225,7 +225,7 @@ view: opportunity {
   dimension_group: created {
     type: time
     timeframes:[date,week,month,raw]
-    sql: ${TABLE}.createddate;;
+    sql: ${TABLE}.created_date;;
   }
 
   dimension_group: close {
@@ -439,7 +439,7 @@ view: user {
   dimension_group: created {
     type:  time
     timeframes: [date,week,month,raw]
-    sql:${TABLE}.createddate ;;
+    sql:${TABLE}.created_date ;;
   }
 
   dimension: age_in_months {
