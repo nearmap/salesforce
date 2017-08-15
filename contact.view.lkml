@@ -52,6 +52,36 @@ view: _contact {
     sql: ${TABLE}.created_date ;;
   }
 
+  dimension_group: date_entered_marketing_disqualified {
+    type: time
+    timeframes: [date, week, month]
+    sql: ${TABLE}.dt_entered_marketing_disqualified_c ;;
+  }
+
+  dimension_group: date_entered_marketing_qualified {
+    type: time
+    timeframes: [date, week, month]
+    sql: ${TABLE}.dt_entered_marketing_qualified_c ;;
+  }
+
+  dimension_group: date_entered_sales_accepted {
+    type: time
+    timeframes: [date, week, month]
+    sql: ${TABLE}.dt_entered_sales_accepted_c ;;
+  }
+
+  dimension_group: date_entered_sales_disqualified_c {
+    type: time
+    timeframes: [date, week, month]
+    sql: ${TABLE}.dt_entered_sales_disqualified_c ;;
+  }
+
+  dimension_group: date_entered_sales_sourced {
+    type: time
+    timeframes: [date, week, month]
+    sql: ${TABLE}.dt_entered_sales_sourced_c ;;
+  }
+
   dimension: department {
     type: string
     sql: ${TABLE}.department ;;
