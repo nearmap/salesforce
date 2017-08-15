@@ -13,6 +13,17 @@ view: _contact {
     sql: ${TABLE}.account_id ;;
   }
 
+  dimension: contact_record_type {
+    type: string
+    case: {
+      when: {
+        sql: ${TABLE}.record_type_id = '012280000002M0tAAE' ;;
+        label: "US Contacts"
+      }
+      else: "AU Contacts"
+    }
+  }
+
   dimension: assistant_name {
     type: string
     sql: ${TABLE}.assistant_name ;;
