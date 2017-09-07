@@ -18,6 +18,12 @@ view: _opportunity {
     sql: ${TABLE}.amount ;;
   }
 
+  dimension: incremental_acv {
+    type: number
+    value_format: "$#,##0"
+    sql: ${TABLE}.incemrental_acv_c ;;
+  }
+
   dimension: campaign_id {
     type: string
     hidden: yes
