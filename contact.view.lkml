@@ -13,6 +13,17 @@ view: _contact {
     sql: ${TABLE}.account_id ;;
   }
 
+  dimension: contact_record_type {
+    type: string
+    case: {
+      when: {
+        sql: ${TABLE}.record_type_id = '012280000002M0tAAE' ;;
+        label: "US Contacts"
+      }
+      else: "AU Contacts"
+    }
+  }
+
   dimension: assistant_name {
     type: string
     sql: ${TABLE}.assistant_name ;;
@@ -39,6 +50,36 @@ view: _contact {
     type: time
     timeframes: [date, week, month]
     sql: ${TABLE}.created_date ;;
+  }
+
+  dimension_group: date_entered_marketing_disqualified {
+    type: time
+    timeframes: [date, week, month]
+    sql: ${TABLE}.dt_entered_marketing_disqualified_c ;;
+  }
+
+  dimension_group: date_entered_marketing_qualified {
+    type: time
+    timeframes: [date, week, month]
+    sql: ${TABLE}.dt_entered_marketing_qualified_c ;;
+  }
+
+  dimension_group: date_entered_sales_accepted {
+    type: time
+    timeframes: [date, week, month]
+    sql: ${TABLE}.dt_entered_sales_accepted_c ;;
+  }
+
+  dimension_group: date_entered_sales_disqualified_c {
+    type: time
+    timeframes: [date, week, month]
+    sql: ${TABLE}.dt_entered_sales_disqualified_c ;;
+  }
+
+  dimension_group: date_entered_sales_sourced {
+    type: time
+    timeframes: [date, week, month]
+    sql: ${TABLE}.dt_entered_sales_sourced_c ;;
   }
 
   dimension: department {

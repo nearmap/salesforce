@@ -44,6 +44,12 @@ view: account {
     value_format: "$#,##0"
   }
 
+  measure: total_annual_revenue {
+    type: sum
+    sql: ${account.annual_revenue} ;;
+    value_format: "$#,##0"
+  }
+
   #     filters:
   #       account.is_deleted: -'0'
 
@@ -328,6 +334,17 @@ view: opportunity {
 
   measure: count_closed {
     type: count
+
+    filters: {
+      field: is_closed
+      value: "Yes"
+    }
+  }
+
+  measure: incremental_acv_closed {
+    type: sum
+    sql: ${incremental_acv} ;;
+    value_format: "$#,##0"
 
     filters: {
       field: is_closed

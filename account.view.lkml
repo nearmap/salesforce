@@ -19,6 +19,17 @@ view: _account {
     value_format: "$#,##0"
   }
 
+  dimension: account_record_type {
+    type: string
+    case: {
+      when: {
+        sql: ${TABLE}.record_type_id = '012280000002LzCAAU' ;;
+        label: "US Accounts"
+      }
+      else: "AU Accounts"
+    }
+  }
+
   # dimension: attributes__type {
   #   type: string
   #   sql: ${TABLE}.attributes__type ;;
