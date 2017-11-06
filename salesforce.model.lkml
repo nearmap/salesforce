@@ -9,6 +9,7 @@ include: "*.dashboard"
 # views to explore——i.e., "base views" #
 
 explore: account {
+  hidden: yes
   #   sql_always_where: |
   #     NOT ${account.is_deleted}
   fields: [ALL_FIELDS*, -account_owner.opportunity_set*, -creator.opportunity_set*]
@@ -32,6 +33,7 @@ explore: account {
 }
 
 explore: lead {
+  hidden: yes
   #   sql_always_where: |
   #     NOT ${lead.is_deleted}
   join: lead_owner {
@@ -69,6 +71,7 @@ explore: lead {
 }
 
 explore: opportunity {
+  hidden: yes
   #   sql_always_where: |
   #     NOT ${opportunity.is_deleted}
   join: account {
